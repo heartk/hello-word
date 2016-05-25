@@ -1,5 +1,7 @@
 #Standard Markdown
 
+[MarkDown 官网地址 请点击](http://daringfireball.net/projects/markdown/)
+
 ##Strong and Emphasize
 ```
 *emphasize*   **strong**
