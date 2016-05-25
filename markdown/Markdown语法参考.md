@@ -4,7 +4,9 @@
 
 ### 语法详解
 [MarkDown Turing社区简体转载翻译 点击](http://www.ituring.com.cn/article/504)
+
 [MarkDown 繁体转载翻译 点击](http://markdown.tw/)
+
 [MarkDown 英文原文 点击](http://daringfireball.net/projects/markdown/syntax)
 
 
