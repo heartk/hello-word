@@ -35,3 +35,46 @@ PS:地址记得要是https:开头的http的淘宝镜像已停止。
 总结：运行ruby gem 命令时候首先看gem source -l，大多数网络错误及其可能是你被墙了。
 
 
+=========== 2016年6月14日12:44:54 ========================
+
+http://www.oschina.net/news/71749/taobao-gems-ruby-china
+
+最近发现taobao的gem源不好使，各种找不到对应版本的包之类的错误。在他们的issue提了bug后，维护者回复了这样的一段话：
+
+新的Gems源由腾讯云赞助
+
+整个 gems.ruby-china.org 的架构：
+
+```
+                    |
+                          [CDN 1] [CDN 2] [CDN 3] ... [CDN N]
+                                           |
+                           {Load Balance us.gems.ruby-china.org}
+                                           |
+                         [us0.gems.ruby-china.org]  ... us1 .. us2
+                                           |
+                                        [Nginx]
+                                           | -------------------------------------------------- |                           |                    |
+    {/gems, /quick, *.4.8, *.4.8.gz}       {/}                 {/api}
+               |                            |                     |
+  [rubygems.global.ssl.fastly.net]      [app server]         [rubygems.org]
+```
+
+新的方案的特点
+
+实时的，不再有同步耗时的问题；
+全球 400+ CDN 节点（据腾讯官方所说 ~~）为 Gem 下载加速；
+更加简单有效的架构，稳定性更高；
+背后有两台国外服务器，确保稳定性，确保 CDN 汇源能获取到数据；
+使用方式
+
+https://gems.ruby-china.org/
+
+在那边的页面有介绍了，和之前 ruby.taobao.org 的方式也是一样的
+
+项目源代码
+
+https://github.com/ruby-china/rubygems-mirror
+
+
+
