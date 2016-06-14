@@ -26,12 +26,12 @@ http://wiki.jikexueyuan.com/project/git-54-stage-clear/
 这个时候我跪了，弹出错误,
 
 遇到问题了，这个时候我都是百度，谷歌（要科学上网）的搜，一折腾没找到要的，突然想起自己在Mac OS下gem命令时候，
-第一次都要修改source，因为在国内访问不了ruby gem的默认地址，改gem source走起。修改方法RubyGems 镜像。
-An [example](http://blog.csdn.net/hshl1214/article/details/49175223 "RubyGems 镜像2")
+第一次都要修改source，因为在国内访问不了ruby gem的默认地址，改gem source走起。修改方法[RubyGems 镜像](http://blog.csdn.net/hshl1214/article/details/49175223 "RubyGems 镜像2") 镜像。
+
 
 
 PS:地址记得要是https:开头的http的淘宝镜像已停止。
 
 总结：运行ruby gem 命令时候首先看gem source -l，大多数网络错误及其可能是你被墙了。
 
-An [example](http://url.com/ "Title")
+
